@@ -1,0 +1,17 @@
+# Excel арқылы жұмыс
+openpyxl>=3.1.2
+
+# Telegram интеграциясы
+python-telegram-bot>=20.3
+
+# Асинхронды операциялар
+asyncio
+
+# Тест жүргізу
+pytest>=8.4.2
+
+# Mocking
+pytest-mock>=3.10.0
+
+# (Қосымша утилиталар)
+python-dotenv>=1.0.0

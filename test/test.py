@@ -1,3 +1,9 @@
+import sys
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)
+
 import pytest
 from unittest.mock import patch
 from queue_system.queue_manager import QueueManager

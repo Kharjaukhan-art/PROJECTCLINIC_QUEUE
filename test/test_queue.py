@@ -75,7 +75,7 @@ def test_search_patient(mock_input, queue):
     p1 = Patient("001", "Alice", "25", "Dr. Smith", "123")
     queue.patients.append(p1)
     queue.search_patient()
-    assert any(p.name == "Alice" for p in queue.patients)
+    assert any(p.name == "Alice" for p in queue.patients)  # дұрыс жазып бер
 
 # ------------------------
 # Статистика шығару

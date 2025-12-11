@@ -23,14 +23,19 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install junit2html  # HTML report генерациясы үшін
 
-    - name: Run tests
+    - name: Run tests and generate XML
       run: |
         mkdir -p test-results
         pytest -v --junitxml=test-results/report.xml test/
 
-    - name: Upload test report
+    - name: Convert XML to HTML
+      run: |
+        junit2html test-results/report.xml test-results/report.html
+
+    - name: Upload test reports
       uses: actions/upload-artifact@v4
       with:
         name: test-report
-        path: test-results/report.xml
+        path: test-results/
